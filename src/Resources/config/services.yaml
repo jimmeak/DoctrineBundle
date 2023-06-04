@@ -1,0 +1,10 @@
+services:
+    NameResolver:
+        class: Jimmeak\DoctrineBundle\Resolver\NameResolver
+    
+    TableNameListener:
+        class: Jimmeak\DoctrineBundle\EventListener\TableNameListener
+        arguments:
+            $nameResolver: "@NameResolver"
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata, method: loadClassMetadata }

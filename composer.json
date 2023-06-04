@@ -1,0 +1,21 @@
+{
+    "name": "jimmeak/doctrine-bundle",
+    "description": "Making life easier while developing Symfony project using Doctrine",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jimmeak\\DoctrineBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jimmy Found",
+            "email": "jimmeak.found@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.15",
+        "doctrine/doctrine-bundle": "^2.9",
+        "gedmo/doctrine-extensions": "^3.11"
+    }
+}
