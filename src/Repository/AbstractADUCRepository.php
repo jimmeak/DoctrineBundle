@@ -4,9 +4,21 @@ namespace Jimmeak\DoctrineBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
-abstract class AbstractRepository extends ServiceEntityRepository
+abstract class AbstractADUCRepository extends ServiceEntityRepository
 {
+    public function findActiveOneBy(array $criteria, ?array $orderBy = null): object|null
+    {
+        $criteria = $this->getActiveCriteria($criteria);
+        return $this->findOneBy($criteria, $orderBy);
+    }
+
     public function findActiveBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
+    {
+        $criteria = $this->getActiveCriteria($criteria);
+        return $this->findBy($criteria, $orderBy, $limit, $offset);
+    }
+
+    protected function getActiveCriteria(array $criteria): array
     {
         if (isset($criteria['active'])) {
             unset($criteria['active']);
@@ -26,6 +38,6 @@ abstract class AbstractRepository extends ServiceEntityRepository
             $criteria = array_merge($criteria, ['deleted' => false]);
         }
 
-        return $this->findBy($criteria, $orderBy, $limit, $offset);
+        return $criteria;
     }
 }
