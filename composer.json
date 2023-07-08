@@ -19,6 +19,7 @@
         "doctrine/doctrine-bundle": "^2.9",
         "gedmo/doctrine-extensions": "^3.11",
         "symfony/string": "^6.3",
-        "symfony/uid": "^6.3"
+        "symfony/uid": "^6.3",
+        "stof/doctrine-extensions-bundle": "^1.8"
     }
 }
