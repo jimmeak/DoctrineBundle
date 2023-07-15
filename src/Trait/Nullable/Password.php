@@ -4,7 +4,7 @@ namespace Jimmeak\DoctrineBundle\Trait\Nullable;
 
 use Doctrine\ORM\Mapping as ORM;
 
-class Password
+trait Password
 {
     #[ORM\Column]
     private string|null $password = null;
