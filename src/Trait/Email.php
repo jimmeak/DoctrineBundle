@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait Email
 {
-    #[ORM\Column(length: 255)]
+    #[ORM\Column]
     private string $email;
 
     public function getEmail(): string

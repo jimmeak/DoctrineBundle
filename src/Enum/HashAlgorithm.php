@@ -64,5 +64,4 @@ enum HashAlgorithm: string
     case HAVAL192_5 = 'haval192,5';
     case HAVAL224_5 = 'haval224,5';
     case HAVAL256_5 = 'haval256,5';
-
 }

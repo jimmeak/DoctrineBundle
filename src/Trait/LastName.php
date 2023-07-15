@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait LastName
 {
-    #[ORM\Column(length: 255)]
+    #[ORM\Column]
     private string $lastName;
 
     public function getLastName(): string

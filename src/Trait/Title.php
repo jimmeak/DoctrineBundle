@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 trait Title
 {
-    #[ORM\Column(length: 255)]
+    #[ORM\Column]
     private string $title;
 
     public function getTitle(): string
