@@ -6,6 +6,16 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 abstract class AbstractADUCRepository extends ServiceEntityRepository
 {
+    public function createActiveQueryBuilder($alias, $indexBy = null, bool $active = true, bool $deleted = false)
+    {
+        return parent::createQueryBuilder($alias, $indexBy)
+            ->andWhere($alias . '.active = :active')
+            ->andWhere($alias . '.deleted = :deleted')
+            ->setParameter('active', $active)
+            ->setParameter('deleted', $deleted)
+        ;
+    }
+
     public function findActiveOneBy(array $criteria, ?array $orderBy = null): object|null
     {
         $criteria = $this->getActiveCriteria($criteria);
