@@ -1,6 +1,6 @@
 <?php
 
-namespace Jimmeak\DoctrineBundle\Trait;
+namespace Jimmeak\DoctrineBundle\Trait\Nullable;
 
 use Doctrine\ORM\Mapping as ORM;
 trait EntityId
