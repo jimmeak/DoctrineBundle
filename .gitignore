@@ -1,2 +1,8 @@
 .idea
+.DS_Store
+
 vendor/
+tools/php-cs-fixer/vendor
+tools/php-cs-fixer/composer.lock
+.php_cs.cache
+.php-cs-fixer.cache
