@@ -25,7 +25,7 @@ readonly class TableNameListener
         }
 
         foreach ($metadata->getAssociationMappings() as $fieldName => $mapping) {
-            if(ClassMetadataInfo::MANY_TO_MANY === $mapping['type'] && $mapping['isOwningSide']) {
+            if (ClassMetadataInfo::MANY_TO_MANY === $mapping['type'] && $mapping['isOwningSide']) {
                 $metadata->associationMappings[$fieldName]['joinTable']['name'] = $this->findManyToManyName(
                     $mapping['sourceEntity'],
                     $mapping['targetEntity'],
