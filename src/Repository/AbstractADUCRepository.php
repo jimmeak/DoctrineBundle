@@ -16,13 +16,13 @@ abstract class AbstractADUCRepository extends ServiceEntityRepository
         ;
     }
 
-    public function findActiveOneBy(array $criteria, ?array $orderBy = null): object|null
+    public function findActiveOneBy(array $criteria, array|null $orderBy = null): object|null
     {
         $criteria = $this->getActiveCriteria($criteria);
         return $this->findOneBy($criteria, $orderBy);
     }
 
-    public function findActiveBy(array $criteria, ?array $orderBy = null, $limit = null, $offset = null): array
+    public function findActiveBy(array $criteria, array|null $orderBy = null, $limit = null, $offset = null): array
     {
         $criteria = $this->getActiveCriteria($criteria);
         return $this->findBy($criteria, $orderBy, $limit, $offset);
