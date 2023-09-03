@@ -18,6 +18,7 @@ trait EntityUuidv4
     public function setEntityId(UuidV4 $entityId): static
     {
         $this->entityId = $entityId;
+
         return $this;
     }
 }

@@ -17,6 +17,7 @@ trait Deleted
     public function setDeleted(bool $deleted = true): static
     {
         $this->deleted = $deleted;
+
         return $this;
     }
 }

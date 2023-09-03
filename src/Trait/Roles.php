@@ -31,7 +31,8 @@ trait Roles
             }
         }
 
-        $this->roles = array_map(fn(Role $role) => $role->value, $this->roles);
+        $this->roles = array_map(fn (Role $role) => $role->value, $this->roles);
+
         return $this;
     }
 
@@ -40,6 +41,7 @@ trait Roles
         if (!in_array($role->value, $this->roles)) {
             $this->roles[] = $role->value;
         }
+
         return $this;
     }
 
@@ -49,6 +51,7 @@ trait Roles
         if (false !== $key) {
             unset($this->roles[$key]);
         }
+
         return $this;
     }
 }

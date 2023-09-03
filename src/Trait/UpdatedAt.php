@@ -21,6 +21,7 @@ trait UpdatedAt
     public function setUpdatedAt(DateTimeImmutable $updatedAt): static
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 }

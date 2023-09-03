@@ -17,6 +17,7 @@ trait FirstName
     public function setFirstName(string $firstName): static
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 }

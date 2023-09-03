@@ -17,6 +17,7 @@ trait Removed
     public function setRemoved(bool $removed = true): static
     {
         $this->removed = $removed;
+
         return $this;
     }
 }

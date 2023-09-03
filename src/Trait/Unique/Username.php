@@ -17,6 +17,7 @@ trait Username
     public function setUsername(string $username): static
     {
         $this->username = $username;
+
         return $this;
     }
 }

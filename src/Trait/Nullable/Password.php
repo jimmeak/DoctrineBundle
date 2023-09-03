@@ -17,6 +17,7 @@ trait Password
     public function setPassword(string|null $password): static
     {
         $this->password = $password;
+
         return $this;
     }
 }

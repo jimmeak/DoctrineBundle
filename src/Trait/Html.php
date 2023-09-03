@@ -18,6 +18,7 @@ trait Html
     public function setHtml(string $html): static
     {
         $this->html = $html;
+
         return $this;
     }
 }

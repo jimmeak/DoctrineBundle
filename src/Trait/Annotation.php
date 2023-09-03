@@ -5,8 +5,8 @@ namespace Jimmeak\DoctrineBundle\Trait;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-trait Annotation {
-
+trait Annotation
+{
     #[ORM\Column(type: Types::TEXT)]
     private string $annotation;
 
@@ -18,6 +18,7 @@ trait Annotation {
     public function setAnnotation(string $annotation): static
     {
         $this->annotation = $annotation;
+
         return $this;
     }
 }

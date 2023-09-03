@@ -17,6 +17,7 @@ trait Title
     public function setTitle(string $title): static
     {
         $this->title = $title;
+
         return $this;
     }
 }

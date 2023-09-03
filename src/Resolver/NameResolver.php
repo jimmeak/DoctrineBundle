@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Resolver;
 
 use Symfony\Component\String\UnicodeString;
+
 use function Symfony\Component\String\u;
 
 class NameResolver implements NameResolverInterface
@@ -11,6 +12,7 @@ class NameResolver implements NameResolverInterface
     {
         $namespaceArray = u($namespace)->replace($prefix, '')->trimPrefix('\\')->split('\\');
         $namespaceArray = array_map(fn (UnicodeString $string) => $string->snake(), $namespaceArray);
+
         return u('__')->join($namespaceArray);
     }
 
@@ -18,6 +20,7 @@ class NameResolver implements NameResolverInterface
     {
         $sourceName = self::name($sourceEntityNamespace, $prefix);
         $targetName = self::name($targetEntityNamespace, $prefix);
+
         return sprintf('%s__MANY_TO_MANY_CONNECTS__%s', $sourceName, $targetName);
     }
 }

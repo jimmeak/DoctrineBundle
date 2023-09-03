@@ -17,6 +17,7 @@ trait Email
     public function setEmail(string $email): static
     {
         $this->email = $email;
+
         return $this;
     }
 }

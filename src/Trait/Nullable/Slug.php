@@ -17,6 +17,7 @@ trait Slug
     public function setSlug(string|null $slug): static
     {
         $this->slug = $slug;
+
         return $this;
     }
 }

@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Trait\Nullable;
 
 use Doctrine\ORM\Mapping as ORM;
+
 trait EntityId
 {
     #[ORM\Column(nullable: true)]
@@ -16,6 +17,7 @@ trait EntityId
     public function setEntityId(string|null $entityId): static
     {
         $this->entityId = $entityId;
+
         return $this;
     }
 }

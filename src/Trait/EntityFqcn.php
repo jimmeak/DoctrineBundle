@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Trait;
 
 use Doctrine\ORM\Mapping as ORM;
+
 trait EntityFqcn
 {
     #[ORM\Column]
@@ -16,6 +17,7 @@ trait EntityFqcn
     public function setEntityFqcn(string $entityFqcn): static
     {
         $this->entityFqcn = $entityFqcn;
+
         return $this;
     }
 }

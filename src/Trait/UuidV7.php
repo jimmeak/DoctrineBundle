@@ -22,6 +22,7 @@ trait UuidV7
     public function refreshId(): static
     {
         $this->id = Uuid::v7();
+
         return $this;
     }
 }

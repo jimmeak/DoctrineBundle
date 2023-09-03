@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Trait\Nullable;
 
 use Doctrine\ORM\Mapping as ORM;
+
 trait IpAddress
 {
     #[ORM\Column(nullable: true)]
@@ -16,6 +17,7 @@ trait IpAddress
     public function setIpAddress(string|null $ipAddress): static
     {
         $this->ipAddress = $ipAddress;
+
         return $this;
     }
 }

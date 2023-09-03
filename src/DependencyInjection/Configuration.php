@@ -2,8 +2,6 @@
 
 namespace Jimmeak\DoctrineBundle\DependencyInjection;
 
-use Jimmeak\DoctrineBundle\Resolver\NameResolver;
-use Jimmeak\DoctrineBundle\Resolver\NameResolverInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 

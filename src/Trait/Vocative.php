@@ -17,6 +17,7 @@ trait Vocative
     public function setVocative(string $vocative): static
     {
         $this->vocative = $vocative;
+
         return $this;
     }
 }

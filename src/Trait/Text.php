@@ -18,6 +18,7 @@ trait Text
     public function setText(string $text): static
     {
         $this->text = $text;
+
         return $this;
     }
 }

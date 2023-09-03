@@ -17,6 +17,7 @@ trait Active
     public function setActive(bool $active = true): static
     {
         $this->active = $active;
+
         return $this;
     }
 }

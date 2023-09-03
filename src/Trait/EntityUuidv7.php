@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Trait;
 
 use Doctrine\ORM\Mapping as ORM;
+
 trait EntityUuidv7
 {
     #[ORM\Column]
@@ -16,6 +17,7 @@ trait EntityUuidv7
     public function setEntityId(\Symfony\Component\Uid\UuidV7 $entityId): static
     {
         $this->entityId = $entityId;
+
         return $this;
     }
 }

@@ -3,6 +3,7 @@
 namespace Jimmeak\DoctrineBundle\Trait;
 
 use Doctrine\ORM\Mapping as ORM;
+
 trait IpAddress
 {
     #[ORM\Column]
@@ -16,6 +17,7 @@ trait IpAddress
     public function setIpAddress(string $ipAddress): static
     {
         $this->ipAddress = $ipAddress;
+
         return $this;
     }
 }

@@ -11,7 +11,8 @@ readonly class TableNameListener
     public function __construct(
         protected NameResolverInterface $nameResolver,
         protected string $entityNamespace = 'App',
-    ) {}
+    ) {
+    }
 
     public function loadClassMetadata(LoadClassMetadataEventArgs $eventArgs): void
     {

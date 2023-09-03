@@ -18,6 +18,7 @@ trait Description
     public function setDescription(string|null $description): static
     {
         $this->description = $description;
+
         return $this;
     }
 }

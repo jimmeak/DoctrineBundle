@@ -7,7 +7,7 @@ use Jimmeak\DoctrineBundle\Enum\HashAlgorithm;
 
 /**
  * This trait is meant to use as a storage for hash
- * made by an algorithm from PHP function hash
+ * made by an algorithm from PHP function hash.
  *
  * https://www.php.net/manual/en/function.hash
  *
@@ -24,13 +24,14 @@ trait CheckSum
         return $this->checkSum;
     }
 
-    public function setCheckSum(string $stringOrCheckSum, HashAlgorithm|null $hashAlgorithm = null): static
+    public function setCheckSum(string $stringOrCheckSum, HashAlgorithm $hashAlgorithm = null): static
     {
         if (null !== $hashAlgorithm) {
             $stringOrCheckSum = hash($hashAlgorithm->value, $stringOrCheckSum);
         }
 
         $this->checkSum = $stringOrCheckSum;
+
         return $this;
     }
 }
