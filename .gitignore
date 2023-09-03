@@ -7,3 +7,6 @@ vendor
 tools/php-cs-fixer/composer.lock
 tools/php-cs-fixer/vendor
 .php-cs-fixer.cache
+
+tools/rector/composer.lock
+tools/rector/vendor
