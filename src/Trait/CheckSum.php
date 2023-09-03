@@ -26,7 +26,7 @@ trait CheckSum
 
     public function setCheckSum(string $stringOrCheckSum, HashAlgorithm|null $hashAlgorithm = null): static
     {
-        if ($hashAlgorithm !== null) {
+        if (null !== $hashAlgorithm) {
             $stringOrCheckSum = hash($hashAlgorithm->value, $stringOrCheckSum);
         }
 
