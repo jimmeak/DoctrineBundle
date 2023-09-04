@@ -10,3 +10,6 @@ tools/php-cs-fixer/vendor
 
 tools/rector/composer.lock
 tools/rector/vendor
+
+tools/phpstan/composer.lock
+tools/phpstan/vendor

@@ -3,10 +3,11 @@
 namespace Jimmeak\DoctrineBundle\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 
 abstract class AbstractADUCRepository extends ServiceEntityRepository
 {
-    public function createActiveQueryBuilder($alias, $indexBy = null, bool $active = true, bool $deleted = false)
+    public function createActiveQueryBuilder(string $alias, $indexBy = null, bool $active = true, bool $deleted = false): QueryBuilder
     {
         return parent::createQueryBuilder($alias, $indexBy)
             ->andWhere($alias . '.active = :active')
@@ -23,7 +24,7 @@ abstract class AbstractADUCRepository extends ServiceEntityRepository
         return $this->findOneBy($criteria, $orderBy);
     }
 
-    public function findActiveBy(array $criteria, array $orderBy = null, $limit = null, $offset = null): array
+    public function findActiveBy(array $criteria, array $orderBy = null, int $limit = null, $offset = null): array
     {
         $criteria = $this->getActiveCriteria($criteria);
 
