@@ -1,0 +1,12 @@
+version: '3'
+
+tasks:
+    fixer:
+        silent: true
+        cmds:
+            - tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+
+    phpstan:
+        silent: true
+        cmds:
+            - tools/phpstan/vendor/bin/phpstan analyse src
