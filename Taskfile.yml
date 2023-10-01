@@ -3,10 +3,23 @@ version: '3'
 tasks:
     fixer:
         silent: true
-        cmds:
-            - tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+        cmd: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
 
     phpstan:
         silent: true
+        cmd: tools/phpstan/vendor/bin/phpstan analyse src
+
+    rector:
+        silent: true
+        cmd: tools/rector/vendor/bin/rector process
+        
+    fix:
+        silent: true
         cmds:
-            - tools/phpstan/vendor/bin/phpstan analyse src
+            - task: rector
+            - task: fixer
+            - task: phpstan
+            
+    phpdoc:
+        silent: true
+        cmd: php phpdoc.phar -d src -t docs/php-doc
